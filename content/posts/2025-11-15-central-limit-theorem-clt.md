@@ -1,6 +1,6 @@
 ---
 title: "Central Limit Theorem (CLT)"
-date: 2025-11-15T16:57:49.169437
+date: 2025-11-15T17:36:57.430073
 draft: false
 notion_page_id: "243d7db3854480bca2b6f823a7f0ad82"
 ---
@@ -57,8 +57,7 @@ plt.ylabel("Frequency")
 plt.grid(True)
 ```
 
-<!-- Note: Notion image URL expires -->
-![](/images/f68cb829_image.png)
+![](../../static/images/f68cb829_image.png)
 
 ---
 
@@ -135,8 +134,7 @@ plt.title('Variance vs 1/n (CLT Verification)')
 plt.grid(True)
 ```
 
-<!-- Note: Notion image URL expires -->
-![](/images/dc967640_image.png)
+![](../../static/images/dc967640_image.png)
 
 Conclusion
 
@@ -175,8 +173,7 @@ plt.suptitle("Central Limit Theorem: Varying Number of Experiments", fontsize=16
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 ```
 
-<!-- Note: Notion image URL expires -->
-![](/images/4581529e_image.png)
+![](../../static/images/4581529e_image.png)
 
 TL;DR
 
@@ -217,8 +214,7 @@ plt.suptitle("CLT with Exponential Distribution", fontsize=16)
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 ```
 
-<!-- Note: Notion image URL expires -->
-![](/images/bb471c97_image.png)
+![](../../static/images/bb471c97_image.png)
 
 Observation
 
@@ -253,8 +249,7 @@ plt.suptitle("Failure of CLT: Sample Means of Cauchy Distribution", fontsize=16)
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 ```
 
-<!-- Note: Notion image URL expires -->
-![](/images/2f0c1ad0_image.png)
+![](../../static/images/2f0c1ad0_image.png)
 
 Why CLT fails here
 
