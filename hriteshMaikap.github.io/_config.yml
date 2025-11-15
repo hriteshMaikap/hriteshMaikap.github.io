@@ -1,0 +1,8 @@
+title: Hritesh Maikap's Blog
+description: Statistics, Machine Learning, and Data Science
+author: Hritesh Maikap
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
