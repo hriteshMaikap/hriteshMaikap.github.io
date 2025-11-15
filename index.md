@@ -86,4 +86,4 @@ document.addEventListener('DOMContentLoaded', loadPosts);
 
 Data enthusiast sharing insights on statistics, ML, and programming.
 
-[GitHub](https://github.com/hriteshmaikap) • [LinkedIn](https://linkedin.com/in/yourprofile)
+[GitHub](https://github.com/hriteshmaikap) • [LinkedIn](https://www.linkedin.com/in/hritesh-maikap-7aaa76246/)
