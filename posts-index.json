@@ -1,11 +1,3 @@
 {
-  "posts": [
-    {
-      "title": "Central Limit Theorem (CLT)",
-      "date": "2025-11-15",
-      "url": "content/posts/2025-11-15-central-limit-theorem-clt.html",
-      "excerpt": "A post about Central Limit Theorem (CLT)",
-      "notion_page_id": "243d7db3854480bca2b6f823a7f0ad82"
-    }
-  ]
+  "posts": []
 }
