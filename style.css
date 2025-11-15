@@ -1,69 +1,302 @@
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    color: #333;
-    background: #fff;
+/* === Dark Grayish AI Theme === */
+:root {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #242424;
+  --bg-tertiary: #2d2d2d;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --text-tertiary: #808080;
+  --accent-primary: #00d4ff;
+  --accent-secondary: #00a8cc;
+  --accent-glow: rgba(0, 212, 255, 0.3);
+  --border-color: #3a3a3a;
+  --code-bg: #1e1e1e;
+  --shadow: rgba(0, 0, 0, 0.5);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 168, 204, 0.05) 0%, transparent 50%);
+}
+
+/* === Typography === */
 h1 {
-    color: #2c3e50;
-    border-bottom: 3px solid #3498db;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-primary);
+  padding-bottom: 12px;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  text-shadow: 0 0 20px var(--accent-glow);
 }
 
 h2 {
-    color: #34495e;
-    margin-top: 40px;
+  color: var(--text-primary);
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-weight: 500;
+  border-left: 4px solid var(--accent-primary);
+  padding-left: 15px;
 }
 
 h3 {
-    color: #555;
+  color: var(--text-secondary);
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1.2em;
+}
+
+/* === Links === */
 a {
-    color: #3498db;
-    text-decoration: none;
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 a:hover {
-    text-decoration: underline;
+  color: var(--accent-secondary);
+  text-shadow: 0 0 8px var(--accent-glow);
 }
 
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--accent-primary);
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* === Code Blocks === */
 code {
-    background-color: #f5f5f5;
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-family: "Courier New", Consolas, monospace;
-    font-size: 0.9em;
+  background-color: var(--code-bg);
+  color: var(--accent-primary);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.9em;
+  border: 1px solid var(--border-color);
 }
 
 pre {
-    background-color: #f5f5f5;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto;
-    border-left: 3px solid #3498db;
+  background-color: var(--code-bg);
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border-left: 4px solid var(--accent-primary);
+  box-shadow: 0 4px 12px var(--shadow);
+  margin: 25px 0;
 }
 
 pre code {
-    background: none;
-    padding: 0;
+  background: none;
+  padding: 0;
+  border: none;
+  color: var(--text-secondary);
 }
 
+/* === Images === */
 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px var(--shadow);
+  margin: 30px 0;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 32px var(--shadow), 0 0 20px var(--accent-glow);
+}
+
+/* === Horizontal Rules === */
 hr {
-    border: none;
-    border-top: 1px solid #e0e0e0;
-    margin: 40px 0;
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 50px 0;
+  opacity: 0.5;
+}
+
+/* === Navigation === */
+nav {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav a {
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--bg-tertiary);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* === Footer === */
+footer {
+  margin-top: 80px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 0.9em;
+}
+
+/* === Post Cards (for index page) === */
+.post-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow), 0 0 20px var(--accent-glow);
+  border-color: var(--accent-primary);
+}
+
+.post-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.post-card h3 a {
+  color: var(--text-primary);
+}
+
+.post-card h3 a:hover {
+  color: var(--accent-primary);
+}
+
+.post-meta {
+  color: var(--text-tertiary);
+  font-size: 0.9em;
+  margin-bottom: 12px;
+  font-family: 'Consolas', monospace;
+}
+
+.post-excerpt {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* === Blockquotes === */
+blockquote {
+  border-left: 4px solid var(--accent-primary);
+  padding-left: 20px;
+  margin-left: 0;
+  color: var(--text-secondary);
+  font-style: italic;
+  background-color: var(--bg-secondary);
+  padding: 15px 20px;
+  border-radius: 0 8px 8px 0;
+}
+
+/* === Tables === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--bg-tertiary);
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: var(--bg-tertiary);
+}
+
+/* === Loading Animation === */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+#posts-list p {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* === Selection === */
+::selection {
+  background-color: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+::-moz-selection {
+  background-color: var(--accent-primary);
+  color: var(--bg-primary);
 }
