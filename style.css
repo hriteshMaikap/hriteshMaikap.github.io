@@ -521,6 +521,16 @@ p {
   gap: 20px;
 }
 
+.posts-list--featured {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.posts-list--featured .post-card {
+  height: 100%;
+}
+
 .post-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);

@@ -67,9 +67,7 @@ export function initializeProjects() {
 
   const scrollLeftBtn = document.getElementById('scroll-left');
   const scrollRightBtn = document.getElementById('scroll-right');
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let currentIndex = 0;
-  let autoplayId;
 
   const scrollToCard = (nextIndex) => {
     if (!cards.length) return;
@@ -79,27 +77,6 @@ export function initializeProjects() {
 
   scrollLeftBtn?.addEventListener('click', () => scrollToCard(currentIndex - 1));
   scrollRightBtn?.addEventListener('click', () => scrollToCard(currentIndex + 1));
-
-  const stopAutoplay = () => {
-    if (autoplayId) {
-      clearInterval(autoplayId);
-      autoplayId = null;
-    }
-  };
-
-  const startAutoplay = () => {
-    if (prefersReducedMotion || cards.length < 2) return;
-    stopAutoplay();
-    autoplayId = setInterval(() => {
-      scrollToCard(currentIndex + 1);
-    }, 4500);
-  };
-
-  const interactiveZone = document.querySelector('.projects-shell');
-  interactiveZone?.addEventListener('mouseenter', stopAutoplay);
-  interactiveZone?.addEventListener('mouseleave', startAutoplay);
-
-  startAutoplay();
 
   container.addEventListener('scroll', () => {
     const visibleIndex = cards.findIndex((card) => isCardMostlyVisible(card, container));

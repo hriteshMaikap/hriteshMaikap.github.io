@@ -47,6 +47,24 @@ title: Home
 
 ---
 
+<section class="section-block" id="featured-posts">
+  <header class="section-heading">
+    <div>
+      <p class="section-eyebrow">Featured Posts</p>
+      <h2>Work logs synced from Notion</h2>
+    </div>
+    <p class="section-copy">
+      A rotating feed of build notes, shipped experiments, and teardown write-ups pulled straight from my Notion journal.
+    </p>
+  </header>
+
+  <div id="featured-posts-list" class="posts-list posts-list--featured">
+    <p class="skeleton-text">Loading featured posts…</p>
+  </div>
+</section>
+
+---
+
 <section class="section-block" id="featured-projects">
   <header class="section-heading">
     <div>

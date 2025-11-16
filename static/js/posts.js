@@ -4,35 +4,46 @@ export function initializePosts() {
 }
 
 async function loadPosts() {
-  const postsContainer = document.getElementById('posts-list');
-  if (!postsContainer) return;
-  
+  const primaryContainer = document.getElementById('posts-list');
+  const featuredContainer = document.getElementById('featured-posts-list');
+  if (!primaryContainer && !featuredContainer) return;
+
   try {
     const posts = await fetchPostsList();
-    
-    if (posts.length === 0) {
-      postsContainer.innerHTML = '<p style="color: #888;">No posts yet. Coming soon.</p>';
-      return;
-    }
-    
-    // Sort posts by date (newest first)
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-    
-    // Generate HTML for posts
-    const postsHTML = posts.map(post => `
-      <div class="post-card">
-        <h3><a href="${post.url}">${post.title}</a></h3>
-        <p class="post-meta">${formatDate(post.date)}</p>
-        ${post.excerpt ? `<p class="post-excerpt">${post.excerpt}</p>` : ''}
-      </div>
-    `).join('');
-    
-    postsContainer.innerHTML = postsHTML;
-    
+
+    if (featuredContainer) {
+      const featuredPosts = posts.slice(0, 3);
+      renderPosts(featuredContainer, featuredPosts, 'Featured pieces are on their way.');
+    }
+
+    if (primaryContainer) {
+      renderPosts(primaryContainer, posts, 'No posts yet. Coming soon.');
+    }
+
   } catch (error) {
     console.error('Error loading posts:', error);
-    postsContainer.innerHTML = '<p style="color: #e74c3c;">Failed to load posts.</p>';
+    const fallbackMessage = '<p style="color: #e74c3c;">Failed to load posts.</p>';
+    if (featuredContainer) featuredContainer.innerHTML = fallbackMessage;
+    if (primaryContainer) primaryContainer.innerHTML = fallbackMessage;
   }
+}
+
+function renderPosts(container, posts, emptyMessage) {
+  if (!container) return;
+
+  if (!posts.length) {
+    container.innerHTML = `<p style="color: #888;">${emptyMessage}</p>`;
+    return;
+  }
+
+  container.innerHTML = posts.map(post => `
+    <div class="post-card">
+      <h3><a href="${post.url}">${post.title}</a></h3>
+      <p class="post-meta">${formatDate(post.date)}</p>
+      ${post.excerpt ? `<p class="post-excerpt">${post.excerpt}</p>` : ''}
+    </div>
+  `).join('');
 }
 
 async function fetchPostsList() {
