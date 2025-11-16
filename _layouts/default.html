@@ -6,7 +6,7 @@
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <link rel="stylesheet" href="/style.css">
     
-    <!-- ✅ ADD: MathJax for equation rendering -->
+    <!-- MathJax for equation rendering -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>
@@ -19,18 +19,12 @@
     </script>
 </head>
 <body>
-    <header>
-        <nav style="margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #e0e0e0;">
-            <a href="/" style="font-weight: bold; font-size: 1.1em;">Home</a>
-        </nav>
-    </header>
-    
     <main>
         {{ content }}
     </main>
     
-    <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #e0e0e0; text-align: center; color: #888;">
-        <p>© 2025 Hritesh Maikap</p>
+    <footer style="margin-top: 80px; padding-top: 30px; border-top: 1px solid var(--border-color); text-align: center; color: var(--text-tertiary);">
+        <p>© 2025 Hritesh Maikap • Built with ❤️ and way too much coffee ☕</p>
     </footer>
 </body>
 </html>
