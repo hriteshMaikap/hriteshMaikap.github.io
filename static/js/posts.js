@@ -11,7 +11,7 @@ async function loadPosts() {
     const posts = await fetchPostsList();
     
     if (posts.length === 0) {
-      postsContainer.innerHTML = '<p style="color: #888;">No posts yet. Coming soon! 🚀</p>';
+      postsContainer.innerHTML = '<p style="color: #888;">No posts yet. Coming soon.</p>';
       return;
     }
     

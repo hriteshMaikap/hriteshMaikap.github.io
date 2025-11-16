@@ -4,34 +4,37 @@ export function initializeJourney() {
     {
       company: 'Siemens DISW',
       role: 'AI Intern',
-      date: 'June 2025 - Present',
-      description: 'Building and deploying scalable AI solutions on Azure',
+      date: 'Jun 2025 — Present',
+      description: 'Shaping agentic copilots and RAG platforms on Azure while building the validation harnesses that keep them honest.',
+      tags: ['Azure AI', 'Agentic', 'Validation'],
       highlights: [
-        'Engineered agentic systems and RAG pipelines on Azure AI for enterprise use cases',
-        'Built serverless backends with Azure Function Apps and AI Search for high-quality data retrieval',
-        'Reduced dev cycles through rigorous validation protocols and model in-context tuning'
+        'Productionised serverless backends with Azure Functions, AI Search, and storage orchestration.',
+        'Rolled internal playbooks that cut new pilot timelines by 35%.',
+        'Designed scenario-based test benches for frontier LLM rollouts.'
       ]
     },
     {
-      company: 'ISRO (NRSC)',
+      company: 'ISRO · NRSC',
       role: 'Project Intern',
-      date: 'Dec 2024 - Jan 2025',
-      description: 'Developed geospatial data processing APIs',
+      date: 'Dec 2024 — Jan 2025',
+      description: 'Bridged geospatial analysts with automation by wrapping Google Earth Engine and LLM routing into clean APIs.',
+      tags: ['Flask', 'GEE', 'LLMs'],
       highlights: [
-        'Built RESTful APIs with Flask and PostgreSQL for geospatial data interaction',
-        'Integrated LLMs to automate complex geospatial analysis through natural language',
-        'Achieved 30% performance improvement through Agile modularization'
+        'Built Flask + PostgreSQL services that translate natural language into geospatial queries.',
+        'Integrated LLM orchestration to automate report-ready insights.',
+        'Modularised the codebase with Agile rituals and shaved 30% off processing time.'
       ]
     },
     {
       company: 'VIT Pune',
-      role: 'AI & DS Student',
-      date: '2022 - 2026',
-      description: 'Pursuing B.E. in Artificial Intelligence and Data Science',
+      role: 'B.E. AI & DS',
+      date: '2022 — 2026',
+      description: 'High-agency undergrad experience: research, hackathons, and community work that keep me experimenting.',
+      tags: ['Research', 'Hackathons', 'Leadership'],
       highlights: [
-        'CGPA: 9.29 - Consistent academic excellence',
-        'Published 2 research papers (Conference + Scopus Indexed)',
-        'Won 5+ hackathons in AI/ML and GenAI domains'
+        'CGPA 9.29 with dual publications (conference + Scopus indexed).',
+        'Top finishes across Citi Innovation Challenge and ISRO hackathons.',
+        'Built communities around GenAI tooling and open-source contributions.'
       ]
     }
   ];
@@ -46,14 +49,16 @@ export function initializeJourney() {
     
     journeyItem.innerHTML = `
       <div class="journey-timeline">
-        <div class="journey-dot"></div>
-        <div class="journey-line"></div>
-        <div class="journey-date">${item.date}</div>
+        <span class="journey-date">${item.date}</span>
+        <span class="journey-marker"></span>
       </div>
       <div class="journey-content">
         <div class="journey-company">${item.company}</div>
         <div class="journey-role">${item.role}</div>
         <p class="journey-description">${item.description}</p>
+        <div class="journey-tags">
+          ${item.tags.map(tag => `<span class="journey-tag">${tag}</span>`).join('')}
+        </div>
         <ul class="journey-highlights">
           ${item.highlights.map(highlight => `<li>${highlight}</li>`).join('')}
         </ul>

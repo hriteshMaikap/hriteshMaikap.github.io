@@ -2,34 +2,29 @@
 export function initializeTechStack() {
   const techStackData = [
     {
-      category: '🤖 AI & ML',
+      category: '🧠 AI Engineering',
       emoji: '🧠',
-      items: ['PyTorch', 'Transformers', 'Hugging Face', 'Langchain', 'Langgraph', 'RAG', 'LLMs', 'Fine-Tuning']
-    },
-    {
-      category: '☁️ Cloud & DevOps',
-      emoji: '⚙️',
-      items: ['Azure AI', 'AI Search', 'Function Apps', 'Docker', 'Git', 'Postman']
+      items: ['PyTorch', 'Transformers', 'Hugging Face', 'LangChain', 'LangGraph', 'RAG Pipelines', 'Agentic Systems', 'Evaluation Harnesses']
     },
     {
       category: '💾 Data & Backend',
-      emoji: '🔧',
-      items: ['Python', 'Flask', 'FastAPI', 'PostgreSQL', 'MySQL', 'Pandas', 'NumPy', 'Pydantic']
+      emoji: '💾',
+      items: ['Python', 'FastAPI', 'Flask', 'PostgreSQL', 'MySQL', 'Pandas', 'NumPy', 'Pydantic']
     },
     {
-      category: '🔍 Vector & Search',
+      category: '☁️ Cloud & Infra',
+      emoji: '☁️',
+      items: ['Azure AI Search', 'Azure Functions', 'Azure Storage', 'Docker', 'GitHub Actions', 'Azure Monitor']
+    },
+    {
+      category: '🎯 Vector & Agents',
       emoji: '🎯',
-      items: ['Qdrant', 'FAISS', 'AI Search', 'Semantic Search']
+      items: ['Qdrant', 'FAISS', 'Llama 3', 'Qwen', 'Prompt Orchestration', 'Model Validation']
     },
     {
-      category: '💻 Languages',
-      emoji: '📝',
-      items: ['Python', 'C++', 'C', 'SQL']
-    },
-    {
-      category: '🌐 Tools',
-      emoji: '🛠️',
-      items: ['Google Earth Engine', 'RESTful APIs', 'Agile', 'Data Processing']
+      category: '🧭 Ops & Workflow',
+      emoji: '🧭',
+      items: ['Google Earth Engine', 'RESTful APIs', 'Postman', 'Agile Delivery', 'Notion Systems', 'VS Code']
     }
   ];
 
