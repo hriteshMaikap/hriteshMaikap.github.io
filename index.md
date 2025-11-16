@@ -82,6 +82,28 @@ document.addEventListener('DOMContentLoaded', loadPosts);
 
 ---
 
+## Featured Projects
+
+### 🚀 Notion to GitHub Pages Automation Tool
+
+A Python CLI tool that automates the conversion and deployment of Notion pages to GitHub Pages, streamlining my content workflow from note-taking to publication.
+
+**What I Built:**
+- **Async Notion API Integration**: Efficiently fetches page content using Notion's REST API with proper error handling and pagination
+- **Intelligent Block Conversion**: Converts Notion blocks with rich text and equations (headings, lists, code, equations, images) to clean Markdown
+- **Image Management**: Automatically downloads and relocates images with URL rewriting for static hosting
+- **Git Automation**: Optional auto-commit and push to GitHub Pages repositories for seamless deployment
+- **CLI-Driven Workflow**: User-friendly command-line interface with configuration management
+- **Type-Safe Architecture**: Built with Pydantic for robust data validation and error prevention
+
+**Technical Stack**: Python 3.12, httpx (async HTTP), Pydantic, Click, GitPython
+
+**Key Achievements**: Designed a modular three-stage pipeline (fetch → parse → convert → deploy) that transforms complex Notion JSON structures into clean Markdown, automatically handling image downloads and git operations for a fully automated publishing workflow.
+
+[View Project on GitHub →](https://github.com/hriteshMaikap/notion-to-gh-pages)
+
+---
+
 ## About Me
 
 Data enthusiast sharing insights on statistics, ML, and programming
