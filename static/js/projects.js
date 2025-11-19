@@ -2,8 +2,8 @@ const projectsData = [
   {
     kicker: 'Agentic ops · 2025',
     title: 'Organisational Agents',
-    summary: 'Developed a multi-agent system using Python and the ‘smolagents‘ framework to automate and unify productivity workflows across Notion and email.',
-    result: 'Engineered a ‘CodeAgent‘ to interpret natural language and execute tasks through custom tools.',
+    summary: 'Developed a multi-agent system using Python and the `smolagents` framework to automate and unify productivity workflows across Notion and email.',
+    result: 'Engineered a `CodeAgent` to interpret natural language and execute tasks through custom tools.',
     tech: ['Python', 'smolagents', 'Groq', 'Notion API'],
     link: 'https://github.com/hriteshMaikap/organisational-agents'
   },
@@ -14,6 +14,14 @@ const projectsData = [
     result: 'Versioned and deployed dataset, tokenizer, and final model to Hugging Face Hub for public reuse.',
     tech: ['PyTorch', 'Transformers', 'HF Hub', 'Datasets'],
     link: 'https://huggingface.co/hriteshMaikap'
+  },
+  {
+    kicker: 'DevOps automation · 2025',
+    title: 'Notion-to-GitHub Pages',
+    summary: 'Developed a Python CLI application that automates content publishing workflows by integrating Notion REST APIs with GitHub Pages deployment, eliminating manual export processes.',
+    result: 'Built type-safe data processing pipeline using Pydantic models to parse Notion blocks and convert rich text, equations, and media to clean Markdown format.',
+    tech: ['Python', 'httpx', 'Pydantic', 'Git', 'Notion API'],
+    link: 'https://github.com/hriteshMaikap/notion-to-gh-pages'
   }
 ];
 
