@@ -1,30 +1,48 @@
-// Tech stack with emojis
+// Tech stack with logos
 export function initializeTechStack() {
   const techStackData = [
     {
-      category: '🧠 AI Engineering',
-      emoji: '🧠',
-      items: ['PyTorch', 'Transformers', 'Hugging Face', 'LangChain', 'LangGraph', 'RAG Pipelines', 'Agentic Systems', 'Evaluation Harnesses']
+      category: 'AI Engineering',
+      items: [
+        { name: 'PyTorch', slug: 'pytorch' },
+        { name: 'Hugging Face', slug: 'huggingface' },
+        { name: 'LangChain', slug: 'langchain' },
+        { name: 'Python', slug: 'python' },
+        { name: 'Qdrant', slug: 'qdrant' },
+        { name: 'Meta Llama', slug: 'meta' },
+        { name: 'Alibaba Qwen', slug: 'alibabacloud' }
+      ]
     },
     {
-      category: '💾 Data & Backend',
-      emoji: '💾',
-      items: ['Python', 'FastAPI', 'Flask', 'PostgreSQL', 'MySQL', 'Pandas', 'NumPy', 'Pydantic']
+      category: 'Data & Backend',
+      items: [
+        { name: 'FastAPI', slug: 'fastapi' },
+        { name: 'Flask', slug: 'flask' },
+        { name: 'PostgreSQL', slug: 'postgresql' },
+        { name: 'MySQL', slug: 'mysql' },
+        { name: 'Pandas', slug: 'pandas' },
+        { name: 'NumPy', slug: 'numpy' },
+        { name: 'Pydantic', slug: 'pydantic' }
+      ]
     },
     {
-      category: '☁️ Cloud & Infra',
-      emoji: '☁️',
-      items: ['Azure AI Search', 'Azure Functions', 'Azure Storage', 'Docker', 'GitHub Actions', 'Azure Monitor']
+      category: 'Cloud & Infra',
+      items: [
+        { name: 'Azure', slug: 'azure' },
+        { name: 'Azure Functions', slug: 'azurefunctions' },
+        { name: 'Docker', slug: 'docker' },
+        { name: 'GitHub Actions', slug: 'githubactions' },
+        { name: 'Google Earth Engine', slug: 'googleearth' }
+      ]
     },
     {
-      category: '🎯 Vector & Agents',
-      emoji: '🎯',
-      items: ['Qdrant', 'FAISS', 'Llama 3', 'Qwen', 'Prompt Orchestration', 'Model Validation']
-    },
-    {
-      category: '🧭 Ops & Workflow',
-      emoji: '🧭',
-      items: ['Google Earth Engine', 'RESTful APIs', 'Postman', 'Agile Delivery', 'Notion Systems', 'VS Code']
+      category: 'Tools',
+      items: [
+        { name: 'Postman', slug: 'postman' },
+        { name: 'Notion', slug: 'notion' },
+        { name: 'VS Code', slug: 'visualstudiocode' },
+        { name: 'Git', slug: 'git' }
+      ]
     }
   ];
 
@@ -35,17 +53,19 @@ export function initializeTechStack() {
     const techCategory = document.createElement('div');
     techCategory.className = 'tech-category';
     techCategory.style.animationDelay = `${index * 0.1}s`;
-    
+
     techCategory.innerHTML = `
-      <div class="tech-category-title">
-        <span>${category.emoji}</span>
-        <span>${category.category}</span>
-      </div>
-      <div class="tech-items">
-        ${category.items.map(item => `<span class="tech-item">${item}</span>`).join('')}
+      <h3 class="tech-category-title">${category.category}</h3>
+      <div class="tech-items-grid">
+        ${category.items.map(item => `
+          <div class="tech-item-logo" title="${item.name}">
+            <img src="https://cdn.simpleicons.org/${item.slug}/EAEAEA" alt="${item.name}" />
+            <span>${item.name}</span>
+          </div>
+        `).join('')}
       </div>
     `;
-    
+
     container.appendChild(techCategory);
   });
 }

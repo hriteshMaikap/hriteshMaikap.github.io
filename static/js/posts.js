@@ -13,12 +13,13 @@ async function loadPosts() {
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     if (featuredContainer) {
-      const featuredPosts = posts.slice(0, 3);
-      renderPosts(featuredContainer, featuredPosts, 'Featured pieces are on their way.');
+      const workLogs = posts.filter(post => post.category === 'work-log').slice(0, 3);
+      renderPosts(featuredContainer, workLogs, 'Work logs are being synced...');
     }
 
     if (primaryContainer) {
-      renderPosts(primaryContainer, posts, 'No posts yet. Coming soon.');
+      const writing = posts.filter(post => post.category === 'writing');
+      renderPosts(primaryContainer, writing, 'No notes published yet.');
     }
 
   } catch (error) {
@@ -59,7 +60,8 @@ async function fetchPostsList() {
         title: "Building AI That Actually Works",
         date: "2025-01-15",
         url: "#",
-        excerpt: "My journey building production-ready AI systems at Siemens and ISRO"
+        excerpt: "My journey building production-ready AI systems at Siemens and ISRO",
+        category: "writing"
       }
     ];
   }

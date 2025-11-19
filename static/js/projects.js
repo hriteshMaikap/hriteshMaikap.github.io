@@ -2,42 +2,18 @@ const projectsData = [
   {
     kicker: 'Agentic ops · 2025',
     title: 'Organisational Agents',
-    summary: 'Multi-agent copilots that reconcile Notion workspaces with email threads. Ships actions through custom tools powered by smolagents.',
-    result: 'CodeAgent converts unstructured requests into tracked actions in seconds.',
+    summary: 'Developed a multi-agent system using Python and the ‘smolagents‘ framework to automate and unify productivity workflows across Notion and email.',
+    result: 'Engineered a ‘CodeAgent‘ to interpret natural language and execute tasks through custom tools.',
     tech: ['Python', 'smolagents', 'Groq', 'Notion API'],
     link: 'https://github.com/hriteshMaikap/organisational-agents'
   },
   {
     kicker: 'Speech systems · 2025',
     title: 'Marathi ASR',
-    summary: 'Fine-tuned Wav2Vec2-BERT with a fully versioned MLOps lane, mixed precision, and gradient checkpointing tuned for Indian dialects.',
-    result: 'Open pipeline on Hugging Face with reproducible datasets + tokenizer.',
+    summary: 'Fine-tuned a Wav2Vec2-BERT model for Automatic Speech Recognition (ASR) on a custom Marathi dataset, managing the full MLOps pipeline.',
+    result: 'Versioned and deployed dataset, tokenizer, and final model to Hugging Face Hub for public reuse.',
     tech: ['PyTorch', 'Transformers', 'HF Hub', 'Datasets'],
     link: 'https://huggingface.co/hriteshMaikap'
-  },
-  {
-    kicker: 'Enterprise LLM infra · 2025',
-    title: 'Azure AI Playbooks',
-    summary: 'Blueprinted RAG stacks with Azure AI Search, serverless Function App backends, and evaluation harnesses that reduce regression risk.',
-    result: 'Cut pilot deployment time for internal teams by 35%.',
-    tech: ['Azure AI', 'RAG', 'Functions', 'Python'],
-    link: '#'
-  },
-  {
-    kicker: 'Geospatial automation · 2024',
-    title: 'ISRO NRSC APIs',
-    summary: 'RESTful layer over Google Earth Engine so analysts can hit geospatial data via natural language prompts routed through LLMs.',
-    result: '30% faster query turnaround for flood-mapping reports.',
-    tech: ['Flask', 'PostgreSQL', 'GEE', 'LLMs'],
-    link: '#'
-  },
-  {
-    kicker: 'Reliability toolkit · 2024',
-    title: 'LLM Validation Harness',
-    summary: 'Structured evaluation suite for agentic workflows—scenario configs, guard-rails, and regression recording tied to GitHub issues.',
-    result: 'Gives me go/no-go clarity before shipping frontier models to prod.',
-    tech: ['LangChain', 'LangGraph', 'pytest', 'Azure Monitor'],
-    link: '#'
   }
 ];
 
