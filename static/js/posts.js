@@ -13,20 +13,19 @@ async function loadPosts() {
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     if (featuredContainer) {
-      const workLogs = posts.filter(post => post.category === 'work-log').slice(0, 3);
+      // Show all posts in featured container for now, or filter by category if needed
+      // The user wants "Work logs synced from Notion"
+      const workLogs = posts.filter(post => post.category === 'work-log' || !post.category).slice(0, 3);
       renderPosts(featuredContainer, workLogs, 'Work logs are being synced...');
     }
 
-    if (primaryContainer) {
-      const writing = posts.filter(post => post.category === 'writing');
-      renderPosts(primaryContainer, writing, 'No notes published yet.');
-    }
+    // If we had a separate writing section, we would filter here.
+    // But the user removed the "Notes" section.
 
   } catch (error) {
     console.error('Error loading posts:', error);
     const fallbackMessage = '<p style="color: #e74c3c;">Failed to load posts.</p>';
     if (featuredContainer) featuredContainer.innerHTML = fallbackMessage;
-    if (primaryContainer) primaryContainer.innerHTML = fallbackMessage;
   }
 }
 
@@ -54,16 +53,7 @@ async function fetchPostsList() {
     const data = await response.json();
     return data.posts || [];
   } catch (error) {
-    // Fallback: return empty or hardcoded posts
-    return [
-      {
-        title: "Building AI That Actually Works",
-        date: "2025-01-15",
-        url: "#",
-        excerpt: "My journey building production-ready AI systems at Siemens and ISRO",
-        category: "writing"
-      }
-    ];
+    return [];
   }
 }
 

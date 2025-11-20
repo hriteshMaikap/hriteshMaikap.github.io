@@ -28,7 +28,7 @@ export function initializeTechStack() {
     {
       category: 'Cloud & Infra',
       items: [
-        { name: 'Azure', slug: 'azure' },
+        { name: 'Azure', slug: 'azure', color: '0078D4' },
         { name: 'Azure Functions', slug: 'azurefunctions' },
         { name: 'Docker', slug: 'docker' },
         { name: 'GitHub Actions', slug: 'githubactions' },
@@ -40,7 +40,7 @@ export function initializeTechStack() {
       items: [
         { name: 'Postman', slug: 'postman' },
         { name: 'Notion', slug: 'notion' },
-        { name: 'VS Code', slug: 'visualstudiocode' },
+        { name: 'VS Code', slug: 'visualstudiocode', color: '007ACC' },
         { name: 'Git', slug: 'git' }
       ]
     }
@@ -59,7 +59,7 @@ export function initializeTechStack() {
       <div class="tech-items-grid">
         ${category.items.map(item => `
           <div class="tech-item-logo" title="${item.name}">
-            <img src="https://cdn.simpleicons.org/${item.slug}/EAEAEA" alt="${item.name}" />
+            <img src="https://cdn.simpleicons.org/${item.slug}/${item.color ? item.color : 'EAEAEA'}" alt="${item.name}" />
             <span>${item.name}</span>
           </div>
         `).join('')}

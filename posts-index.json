@@ -7,14 +7,6 @@
       "excerpt": "A post about Central Limit Theorem (CLT)",
       "notion_page_id": "243d7db3854480bca2b6f823a7f0ad82",
       "category": "writing"
-    },
-    {
-      "title": "Building Agentic Systems",
-      "date": "2025-11-18",
-      "url": "#",
-      "excerpt": "Work log: Debugging multi-agent orchestration.",
-      "notion_page_id": "dummy-id",
-      "category": "work-log"
     }
   ]
 }
