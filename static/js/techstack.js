@@ -26,7 +26,7 @@ export function initializeTechStack() {
     {
       category: 'Cloud & Infra',
       items: [
-        { name: 'Azure', slug: 'azure', color: '0078D4' },
+        { name: 'Azure', slug: 'azure', color: '0078D4', localImage: '/static/images/azure logo.png' },
         { name: 'Docker', slug: 'docker' },
         { name: 'GitHub Actions', slug: 'githubactions' },
         { name: 'Google Earth Engine', slug: 'googleearth' }
@@ -54,12 +54,17 @@ export function initializeTechStack() {
     techCategory.innerHTML = `
       <h3 class="tech-category-title">${category.category}</h3>
       <div class="tech-items-grid">
-        ${category.items.map(item => `
+        ${category.items.map(item => {
+      const imgSrc = item.localImage
+        ? item.localImage
+        : `https://cdn.simpleicons.org/${item.slug}/${item.color ? item.color : 'EAEAEA'}`;
+
+      return `
           <div class="tech-item-logo" title="${item.name}">
-            <img src="https://cdn.simpleicons.org/${item.slug}/${item.color ? item.color : 'EAEAEA'}" alt="${item.name}" />
+            <img src="${imgSrc}" alt="${item.name}" />
             <span>${item.name}</span>
           </div>
-        `).join('')}
+        `}).join('')}
       </div>
     `;
 

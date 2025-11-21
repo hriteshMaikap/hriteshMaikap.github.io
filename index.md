@@ -9,9 +9,9 @@ title: Home
     <div class="hero-box personal">
       <div>
         <p class="hero-eyebrow">THE PERSON</p>
-        <h1 class="hero-title">Chaotic Good.</h1>
+        <h1 class="hero-title">Hritesh Maikap.</h1>
         <p class="hero-text">
-          I geek out on the subtle art of designing tools for LLM agents and debating whether we're living through AI's dot-com moment.
+          <strong>Chaotic Good.</strong> I geek out on the subtle art of designing tools for LLM agents and debating whether we're living through AI's dot-com moment.
           <br><br>
           When I'm not deploying models, I'm consuming psychological thrillers, mind-bending sci-fi, and gatekeeping my playlists.
         </p>
@@ -24,7 +24,7 @@ title: Home
           <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" />
         </a>
         <a href="https://linkedin.com/in/hritesh-maikap-7aaa76246/" target="_blank" class="social-icon-link" title="LinkedIn">
-          <img src="https://cdn.simpleicons.org/linkedin/ffffff" alt="LinkedIn" />
+          <img src="/static/images/linkedin.png" alt="LinkedIn" />
         </a>
         <a href="mailto:hriteshkumarmaikap@gmail.com" class="social-icon-link" title="Email">
           <img src="https://cdn.simpleicons.org/gmail/ffffff" alt="Email" />
@@ -146,7 +146,7 @@ title: Home
       <li><strong>Citi Campus Innovation Challenge 5.0</strong> - Top 5 Finalist</li>
       <li><strong>COEP Mindspark Tata Motors Hackathon</strong> - Winner</li>
       <li><strong>Best Paper Award</strong> - "Data Analytics" at WCSC 2024</li>
-      <li><strong>Multiple Hackathon Winner (5x)</strong> - AI/ML & GenAI domains</li>
+      <li><strong>Code Odyssey by Consultadd- 2nd Runner Up</strong> - AI/ML & GenAI domains</li>
     </ul>
   </div>
 </section>
