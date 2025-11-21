@@ -8,9 +8,7 @@ export function initializeTechStack() {
         { name: 'Hugging Face', slug: 'huggingface' },
         { name: 'LangChain', slug: 'langchain' },
         { name: 'Python', slug: 'python' },
-        { name: 'Qdrant', slug: 'qdrant' },
-        { name: 'Meta Llama', slug: 'meta' },
-        { name: 'Alibaba Qwen', slug: 'alibabacloud' }
+        { name: 'Meta Llama', slug: 'meta' }
       ]
     },
     {
@@ -29,7 +27,6 @@ export function initializeTechStack() {
       category: 'Cloud & Infra',
       items: [
         { name: 'Azure', slug: 'azure', color: '0078D4' },
-        { name: 'Azure Functions', slug: 'azurefunctions' },
         { name: 'Docker', slug: 'docker' },
         { name: 'GitHub Actions', slug: 'githubactions' },
         { name: 'Google Earth Engine', slug: 'googleearth' }

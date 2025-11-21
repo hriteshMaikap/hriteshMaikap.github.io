@@ -1,3 +1,62 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero-section">
+  <div class="hero-grid">
+    <!-- Box 1: The Person -->
+    <div class="hero-box personal">
+      <div>
+        <p class="hero-eyebrow">THE PERSON</p>
+        <h1 class="hero-title">Chaotic Good.</h1>
+        <p class="hero-text">
+          I geek out on the subtle art of designing tools for LLM agents and debating whether we're living through AI's dot-com moment.
+          <br><br>
+          When I'm not deploying models, I'm consuming psychological thrillers, mind-bending sci-fi, and gatekeeping my playlists.
+        </p>
+      </div>
+      <div class="hero-links">
+        <a href="https://x.com/HriteshMaikap" target="_blank" class="social-icon-link" title="X (Twitter)">
+          <img src="https://cdn.simpleicons.org/x/ffffff" alt="X" />
+        </a>
+        <a href="https://github.com/hriteshMaikap" target="_blank" class="social-icon-link" title="GitHub">
+          <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" />
+        </a>
+        <a href="https://linkedin.com/in/hritesh-maikap-7aaa76246/" target="_blank" class="social-icon-link" title="LinkedIn">
+          <img src="https://cdn.simpleicons.org/linkedin/ffffff" alt="LinkedIn" />
+        </a>
+        <a href="mailto:hriteshkumarmaikap@gmail.com" class="social-icon-link" title="Email">
+          <img src="https://cdn.simpleicons.org/gmail/ffffff" alt="Email" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Box 2: The Engineer -->
+    <div class="hero-box professional">
+      <div>
+        <p class="hero-eyebrow">THE ENGINEER</p>
+        <h2 class="hero-title">Building Systems.</h2>
+        <p class="hero-text">
+          Aspiring ML Engineer obsessed with production-grade backends and scalable training pipelines.
+          <br><br>
+          Currently leveling up from junior roles, shipping end-to-end projects that bridge research and production. I care about latency more than weekends.
+        </p>
+      </div>
+      <div class="hero-tags">
+        <span class="chip">Agentic Systems</span>
+        <span class="chip">RAG</span>
+        <span class="chip">Azure AI</span>
+        <span class="chip">Model Validation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+---
+
+<section class="section-block" id="featured-posts">
+  <header class="section-heading">
     <div>
       <p class="section-eyebrow">Featured Posts</p>
       <h2>Work logs synced from Notion</h2>
@@ -27,11 +86,11 @@
   </header>
 
   <div class="projects-shell">
-    <button class="scroll-btn scroll-left" id="scroll-left">Prev</button>
+    <button class="scroll-btn scroll-left" id="scroll-left">←</button>
     <div class="projects-container">
       <div class="projects-scroll" id="projects-scroll"></div>
     </div>
-    <button class="scroll-btn scroll-right" id="scroll-right">Next</button>
+    <button class="scroll-btn scroll-right" id="scroll-right">→</button>
   </div>
 </section>
 
