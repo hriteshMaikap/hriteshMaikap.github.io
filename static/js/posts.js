@@ -19,12 +19,9 @@ async function loadPosts() {
       renderPosts(featuredContainer, workLogs, 'Work logs are being synced...');
     }
 
-    // If we had a separate writing section, we would filter here.
-    // But the user removed the "Notes" section.
-
   } catch (error) {
     console.error('Error loading posts:', error);
-    const fallbackMessage = '<p style="color: #e74c3c;">Failed to load posts.</p>';
+    const fallbackMessage = '<div class="error-state"><p>Failed to load posts. Check connection.</p></div>';
     if (featuredContainer) featuredContainer.innerHTML = fallbackMessage;
   }
 }

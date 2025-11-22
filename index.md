@@ -38,16 +38,16 @@ title: Home
         <p class="hero-eyebrow">THE ENGINEER</p>
         <h2 class="hero-title">Building Systems.</h2>
         <p class="hero-text">
-          Aspiring ML Engineer obsessed with production-grade backends and scalable training pipelines.
+          AI Engineer learning and building systems that can be scaled and maintained. I also have a knack for tradtional ML (SVM rules) and neural nets. 
           <br><br>
-          Currently leveling up from junior roles, shipping end-to-end projects that bridge research and production. I care about latency more than weekends.
+          Currently leveling up from junior roles, shipping end-to-end projects that bridge research, prototype and production.
         </p>
       </div>
       <div class="hero-tags">
         <span class="chip">Agentic Systems</span>
-        <span class="chip">RAG</span>
+        <span class="chip">Machine Learning</span>
         <span class="chip">Azure AI</span>
-        <span class="chip">Model Validation</span>
+        <span class="chip">Context Engineering</span>
       </div>
     </div>
   </div>
