@@ -37,7 +37,7 @@ export function initializeTechStack() {
       items: [
         { name: 'Postman', slug: 'postman' },
         { name: 'Notion', slug: 'notion' },
-        { name: 'VS Code', slug: 'visualstudiocode', color: '007ACC', localImage: '/static/images/vscode icon.png' },
+        { name: 'VS Code', slug: 'visualstudiocode', localImage: '/static/images/vscode icon.png' },
         { name: 'Git', slug: 'git' }
       ]
     }

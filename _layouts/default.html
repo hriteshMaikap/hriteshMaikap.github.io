@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- MathJax for equation rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$'], ['\\[', '\\]']]
-        }
-      };
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- MathJax for equation rendering -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
 </head>
+
 <body>
-    <nav class="sticky-nav">
-        <a href="#">Home</a>
-        <a href="#featured-posts">Posts</a>
-        <a href="#featured-projects">Labs</a>
-        <a href="#journey">Journey</a>
-        <a href="#skills">Stack</a>
-    </nav>
-    <main>
-        {{ content }}
-    </main>
-    
-    <footer style="margin-top: 80px; padding-top: 30px; border-top: 1px solid var(--border-color); text-align: center; color: var(--text-tertiary);">
-        <p>© 2025 Hritesh Maikap • Built with ❤️ and way too much coffee ☕</p>
-    </footer>
+  <nav class="sticky-nav">
+    {% if page.layout == 'post' %}
+    <a href="/">Home</a>
+    {% else %}
+    <a href="#">Home</a>
+    <a href="#featured-posts">Posts</a>
+    <a href="#featured-projects">Labs</a>
+    <a href="#journey">Journey</a>
+    <a href="#skills">Stack</a>
+    {% endif %}
+  </nav>
+  <main>
+    {{ content }}
+  </main>
+
+  <footer
+    style="margin-top: 80px; padding-top: 30px; border-top: 1px solid var(--border-color); text-align: center; color: var(--text-tertiary);">
+    <p>© 2025 Hritesh Maikap • Built with ❤️ and way too much coffee ☕</p>
+  </footer>
 </body>
+
 </html>
