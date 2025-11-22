@@ -120,7 +120,7 @@ title: Home
       <h2>The toolset I reach for daily</h2>
     </div>
     <p class="section-copy">
-      These are the battle-tested ingredients for agentic workflows, validation harnesses, and data products.
+      My personal arsenal that helps me bring my ideas to life. I would say I have decent experience in these, so much so that you won't have to hold my finger at every single step. :P
     </p>
   </header>
 
@@ -142,11 +142,11 @@ title: Home
 
   <div class="achievements-list">
     <ul class="achievements-ul">
-      <li><strong>ISRO Hackathon Finalist</strong> & Problem Statement Winner ('24)</li>
-      <li><strong>Citi Campus Innovation Challenge 5.0</strong> - Top 5 Finalist</li>
+      <li><strong>ISRO National Hackathon Finalist</strong> & Problem Statement Winner ('24)</li>
+      <li><strong>Citi Campus Innovation Challenge 5.0</strong> - Top 5 Finalist (Out of 1600+ teams)</li>
       <li><strong>COEP Mindspark Tata Motors Hackathon</strong> - Winner</li>
+      <li><strong>Code Odyssey by Consultadd- 2nd Runner Up</strong> - Gen AI Domain</li>
       <li><strong>Best Paper Award</strong> - "Data Analytics" at WCSC 2024</li>
-      <li><strong>Code Odyssey by Consultadd- 2nd Runner Up</strong> - AI/ML & GenAI domains</li>
     </ul>
   </div>
 </section>

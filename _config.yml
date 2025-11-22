@@ -6,3 +6,9 @@ highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+defaults:
+  - scope:
+      path: "content/posts"
+    values:
+      layout: "post"

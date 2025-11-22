@@ -26,7 +26,7 @@ export function initializeTechStack() {
     {
       category: 'Cloud & Infra',
       items: [
-        { name: 'Azure', slug: 'azure', color: '0078D4', localImage: '/static/images/azure logo.png' },
+        { name: 'Azure', slug: 'azure', color: '007ACC', localImage: '/static/images/azure logo.png' },
         { name: 'Docker', slug: 'docker' },
         { name: 'GitHub Actions', slug: 'githubactions' },
         { name: 'Google Earth Engine', slug: 'googleearth' }
@@ -37,7 +37,7 @@ export function initializeTechStack() {
       items: [
         { name: 'Postman', slug: 'postman' },
         { name: 'Notion', slug: 'notion' },
-        { name: 'VS Code', slug: 'visualstudiocode', color: '007ACC' },
+        { name: 'VS Code', slug: 'visualstudiocode', color: '007ACC', localImage: '/static/images/vscode icon.png' },
         { name: 'Git', slug: 'git' }
       ]
     }
